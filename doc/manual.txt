@@ -1748,7 +1748,9 @@ To use it in your existing sphinx project you need to do the following:
     #pdf_use_toc = True
 
     # How many levels deep should the table of contents be?
-    pdf_toc_depth = 9999
+    # WARNING: do not set the depth too large, otherwise Adobe Reader 9 or later
+    # will abort with "error reading this document (14)"
+    pdf_toc_depth = 3
 
     # Add section number to section references
     pdf_use_numbered_links = False
